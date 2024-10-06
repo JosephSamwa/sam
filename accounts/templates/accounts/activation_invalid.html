@@ -1,0 +1,87 @@
+
+{% load static %}
+<Head>
+    <style>
+    .message-containerI {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.message-boxI {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    text-align: center;
+    border-left: 5px solid #e74c3c; /* Red border to indicate error */
+}
+
+.icon-containerI {
+    margin-bottom: 20px;
+}
+
+.error-iconI {
+    width: 50px;
+    height: 50px;
+    stroke: #e74c3c; /* Red color for error */
+}
+
+.message-boxI h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.message-boxI p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.button-containerI {
+    margin-top: 20px;
+}
+
+.btnI {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50; /* Green color for primary button */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btnI:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+    </style>
+{% block title %}Activation Invalid{% endblock %}
+</Head>
+
+{% block content %}
+<div class="message-containerI">
+    <div class="message-boxI">
+        <div class="icon-containerI">
+            <svg class="error-iconI" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 22h20L12 2z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>            
+        </div>
+        <h2>Activation Link Invalid</h2>
+        <p>Sorry, the activation link you used is invalid or has expired. Please try registering again or contact support for assistance.</p>
+        <div class="button-containerI">
+            <a href="{% url 'register' %}" class="btn btn-primaryI">Register Again</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

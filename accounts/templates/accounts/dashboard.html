@@ -1,0 +1,12 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome to your Dashboard, {{ user.username }}!</h2>
+<p>This is your client dashboard where you can manage your account and view your details.</p>
+<!-- Add more dashboard content here -->
+<h3>Name {{ user.username }}</h3>
+<h3>Email {{ user.email }}</h3>
+
+{% endblock %}
